@@ -67,8 +67,10 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin d
 
 # Permetti a tutti gli utenti di accedere a Docker senza sudo
 echo "Configurazione dei permessi per Docker..."
-sudo groupadd -f docker
-sudo chmod 666 /var/run/docker.sock
+sudo chmod 777 /var/run/docker.sock
+
+#Installa docker compose
+ sudo apt-get install docker-compose-plugin
 
 # Installa AZCLI
 echo "Installazione di AZCLI"
